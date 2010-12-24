@@ -1,0 +1,30 @@
+{form loginForm}
+	{errors}
+
+	<table class="form">
+		<tr>
+			<th>{label username}:</th>
+			<td>{input username}</td>
+			<td rowspan="4" class="help">
+				<p>Meno a heslo je rovnaké ako do žiackej knižky</p>
+			</td>
+		</tr>
+		<tr>
+			<th>{label password}:</th>
+			<td>{input password}</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>{input staysignedin} {label staysignedin}</td>
+		</tr>
+		<tr>
+			<th>{label school}:</th>
+			<td>{input school}</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>{input send}</td>
+		</tr>
+	</table>
+
+{/form}

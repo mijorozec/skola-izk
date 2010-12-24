@@ -1,0 +1,44 @@
+#nav ul {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav ul li {
+	list-style: none;
+	float: left;
+	margin: 0px 0px 0px 10px;
+}
+
+table.marks .class {
+	width: 20%;
+}
+
+table.marks .marks {
+	width: 60%;
+}
+
+table.marks .total-mark {
+	width: 5%;
+}
+
+table.marks .percentage {
+	width: 5%;
+}
+
+table.marks .total-points {
+	width: 10%;
+}
+
+form table.form td {
+	background: transparent;
+}
+
+form table td.help {
+	vertical-align: top;
+	color: #B1B1B1;
+}
+
+#footer {
+	color: #B1B1B1;
+}

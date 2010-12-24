@@ -1,2 +1,44 @@
 
 {block content}
+<p class="last-change">
+	Posledná zmena známok: <strong>{$lastChange}</strong>
+</p>
+
+<table class="marks" n:snippet="marks">
+	<tr>
+		<th class="class">Predmet</th>
+		<th class="marks">Známky</th>
+		<th class="total-mark">Známka</th>
+		<th class="percentage">Percentá</th>
+		<th class="total-points">Spolu bodov</th>
+	</tr>
+	{foreach $allMarks as $name => $marks}
+	<tr>
+		<td class="class"><strong>{$name}</strong></td>
+		<td class="marks">{$marks['original']}</td>
+		<?php
+			$points = 0;
+			$total = 0;
+			foreach ($marks['readable'] as $mark) {
+				$points += $mark[0];
+				$total += $mark[1];
+			}
+			if ($points > 0 && $total > 0) {
+				$percentage = round(($points / $total) * 100, 2);
+				$anyMarks = TRUE;
+		    } else {
+				$percentage = NULL;
+				$anyMarks = FALSE;
+			}
+				if ($percentage >= 90) $mark = 1;
+			elseif ($percentage >= 75) $mark = 2;
+			elseif ($percentage >= 60) $mark = 3;
+			elseif ($percentage >= 45) $mark = 4;
+			  else                     $mark = 5;
+		?>
+		<td class="total-mark">{if $anyMarks}{$mark}{else}-{/if}</td>
+		<td class="percentage">{if $anyMarks}{$percentage}%{else}-{/if}</td>
+		<td class="total-points">{if $anyMarks}{$points}/{$total}{else}-{/if}</td>
+	</tr>
+	{/foreach}
+</table>
