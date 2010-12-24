@@ -1,0 +1,9 @@
+[submodule "libs/Curl"]
+	path = libs/Curl
+	url = git://github.com/shuber/curl.git
+[submodule "libs/Nette"]
+	path = libs/Nette
+	url = git://github.com/nette/nette.git
+[submodule "libs/FormMacros"]
+	path = libs/FormMacros
+	url = git://gist.github.com/754010.git

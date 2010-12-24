@@ -4,7 +4,7 @@ use Nette\Debug;
 use Nette\Environment;
 use Nette\Application\Route;
 
-require_once LIBS_DIR . '/Nette/loader.php';
+require_once LIBS_DIR . '/Nette/Nette/loader.php';
 
 Debug::enable();
 
